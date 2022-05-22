@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Gear Lever",
+    "pricePerUnit": 67000,
+    "minimumQuantity": 100,
+    "availablQuantity": 500,
+    "Description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
+    "image": "https://image.shutterstock.com/image-photo/gear-lever-manual-transmission-hand-260nw-1401721253.jpg"
+  },
+  {
+    "name": "Seat belt",
+    "pricePerUnit": 67000,
+    "minimumQuantity": 100,
+    "availablQuantity": 500,
+    "Description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
+    "image": "https://www.scienceabc.com/wp-content/uploads/ext-www.scienceabc.com/wp-content/uploads/2016/02/seat-belt.jpg-.jpg"
+  },
+  {
+    "name": "Steering wheel",
+    "pricePerUnit": 67000,
+    "minimumQuantity": 100,
+    "availablQuantity": 500,
+    "Description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
+    "image": "https://cdn.shopify.com/s/files/1/0069/0080/9818/products/custom_resized_e4049bab-f1b0-4f53-82ca-73570adef1e3_1024x1024@2x.jpg"
+  },
+  {
+    "name": "Catalytic Converter",
+    "pricePerUnit": 67000,
+    "minimumQuantity": 100,
+    "availablQuantity": 500,
+    "Description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
+    "image": "https://images.hgmsites.net/med/catalytic-converter_100442428_m.jpg"
+  },
+  {
+    "name": "Wheel",
+    "pricePerUnit": 67000,
+    "minimumQuantity": 100,
+    "availablQuantity": 500,
+    "Description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
+    "image": "https://images.hgmsites.net/med/catalytic-converter_100442428_m.jpg"
+  },
+  {
+    "name": "Front Axle",
+    "pricePerUnit": 67000,
+    "minimumQuantity": 100,
+    "availablQuantity": 500,
+    "Description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
+    "image": "https://d2t1xqejof9utc.cloudfront.net/screenshots/pics/34acdac4e3ea9781a46eb7f6fc95020c/large.JPG"
+  }
+]
