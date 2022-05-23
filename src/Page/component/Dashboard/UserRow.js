@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const UserRow = ({ user, refetch }) => {
   const { email, role } = user;
-// console.log(role);
+  // console.log(role);
   const makeAdmin = (event) => {
     fetch(`http://localhost:5000/users/admin/${email}`, {
       method: "PUT",
@@ -11,11 +11,19 @@ const UserRow = ({ user, refetch }) => {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status === 403) {
+          alert("Failed to make admin");
+          res.json();
+          return;
+        }
+      })
       .then((data) => {
         refetch();
-        console.log(data);
+
         alert("Successfully made a admin");
+
+        console.log(data);
       });
   };
   return (

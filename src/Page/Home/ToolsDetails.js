@@ -24,7 +24,7 @@ const ToolsDetails = ({ services }) => {
         </figure>
         <div class="card-body">
           <h2 class="card-title">{name}</h2>
-          <p>{Description}</p>
+          <p>Details: {Description}</p>
           <p>Minimum Quantity: ${minimumQuantity}</p>
           <p>Available Quantity: ${availablQuantity} </p>
           <p>Price per Unit: ${pricePerUnit}</p>

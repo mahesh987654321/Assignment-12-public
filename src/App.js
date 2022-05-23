@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-
+import "./App.css";
 import Home from "./Page/Home/Home";
 import Footer from "./Page/Footer/Footer";
 
@@ -13,6 +13,9 @@ import Myreview from "./Page/component/Dashboard/Myreview";
 import MyProfile from "./Page/component/Dashboard/MyProfile";
 import UpdateProfile from "./Page/component/Dashboard/UpdateProfile";
 import Users from "./Page/component/Dashboard/Users";
+import ManageProducts from "./Page/component/Dashboard/ManageProducts";
+import AddProduct from "./Page/component/Dashboard/AddProduct";
+import ManageOrders from "./Page/component/Dashboard/ManageOrders";
 
 function App() {
   return (
@@ -28,6 +31,15 @@ function App() {
           <Route path="review" element={<Myreview></Myreview>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
           <Route path="users" element={<Users></Users>}></Route>
+          <Route
+            path="manageProduct"
+            element={<ManageProducts></ManageProducts>}
+          ></Route>
+          <Route path="addProduct" element={<AddProduct></AddProduct>}></Route>
+          <Route
+            path="manageOrder"
+            element={<ManageOrders></ManageOrders>}
+          ></Route>
           <Route
             path="profile/:id"
             element={<UpdateProfile></UpdateProfile>}
