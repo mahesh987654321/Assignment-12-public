@@ -12,6 +12,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import Loading from "../Loading/Loading";
 import auth from "../../../firebaseinit";
+import Hooks from "../Hooks/Hooks";
 
 const SignUp = () => {
   const [signInWithGoogle, user2, loading] = useSignInWithGoogle(auth);
@@ -26,6 +27,7 @@ const SignUp = () => {
   const handelEmail = (event) => {
     setEmail(event.target.value);
   };
+  const [token] = Hooks(user || user2);
   if (loading || loading1) {
     return <Loading></Loading>;
   }
@@ -39,7 +41,7 @@ const SignUp = () => {
   if (loading) {
     return <p>Loading...</p>;
   }
-  if (user || user2) {
+  if (token) {
     navigate("/");
   }
   const handelSubmit = (event) => {
