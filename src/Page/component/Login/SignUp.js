@@ -8,7 +8,7 @@ import {
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import "./SignUp.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import Loading from "../Loading/Loading";
 import auth from "../../../firebaseinit";
@@ -27,6 +27,8 @@ const SignUp = () => {
   const handelEmail = (event) => {
     setEmail(event.target.value);
   };
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
   const [token] = Hooks(user || user2);
   if (loading || loading1) {
     return <Loading></Loading>;
@@ -42,6 +44,7 @@ const SignUp = () => {
     return <p>Loading...</p>;
   }
   if (token) {
+    // navigate(from, { replace: true });
     navigate("/");
   }
   const handelSubmit = (event) => {

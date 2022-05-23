@@ -4,7 +4,7 @@ import ReviewDetails from "./ReviewDetails";
 
 const Review = () => {
   const [orders, setOrders] = useState([]);
-  console.log(orders);
+
   useEffect(() => {
     const getOrders = async () => {
       const url = `http://localhost:5000/review`;

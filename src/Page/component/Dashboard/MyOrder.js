@@ -7,7 +7,6 @@ import OrderDetails from "./OrderDetails";
 const MyOrder = () => {
   const [order, setOrder] = useState([]);
   const [user] = useAuthState(auth);
-  console.log(user);
 
   useEffect(() => {
     const getOrders = async () => {
@@ -17,6 +16,16 @@ const MyOrder = () => {
       setOrder(data);
     };
     getOrders();
+    // if (user) {
+    //   const email = user.email;
+    //   const url = `http://localhost:5000/order?email=${email}`;
+    //   fetch(url, {
+    //     method: "GET",
+    //     headers: {
+    //       authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+    //     },
+    //   });
+    // }
   }, [user, order]);
 
   return (

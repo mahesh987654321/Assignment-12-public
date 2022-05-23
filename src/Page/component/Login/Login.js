@@ -12,14 +12,16 @@ import "./Login.css";
 
 import auth from "../../../firebaseinit";
 import Loading from "../Loading/Loading";
+import Hooks from "../Hooks/Hooks";
 const Login = () => {
   const [sendPasswordResetEmail, loading] = useSendPasswordResetEmail(auth);
   const [email, setEmail] = useState("");
-  const [signInWithGoogle] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
   const [password, setPassword] = useState("");
   const [error1, setError1] = useState("");
   const [signInWithEmailAndPassword, user, loading1, error] =
     useSignInWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [token] = Hooks(user || guser);
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   let errorElement;
@@ -49,7 +51,7 @@ const Login = () => {
   if (loading) {
     return <p>Loading...</p>;
   }
-  if (user) {
+  if (token) {
     navigate(from, { replace: true });
   }
   if (error) {
