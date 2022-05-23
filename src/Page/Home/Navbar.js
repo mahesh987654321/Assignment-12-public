@@ -1,3 +1,4 @@
+import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
@@ -5,6 +6,10 @@ import auth from "../../firebaseinit";
 import NavbarColor from "./NavbarColor.css";
 const Navbar = () => {
   const [user] = useAuthState(auth);
+
+  const logout = () => {
+    signOut(auth);
+  };
   return (
     <div>
       <div class="navbar navbar-color font-bold">
@@ -46,9 +51,7 @@ const Navbar = () => {
               <li>
                 <a>Blogs</a>
               </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
+              <li>{}</li>
             </ul>
           </div>
 
@@ -58,10 +61,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <label
-              for="my-drawer-2"
-              class="drawer-button lg:hidden"
-            >
+            <label for="my-drawer-2" class="drawer-button lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -99,7 +99,13 @@ const Navbar = () => {
               <a>Blogs</a>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              {user ? (
+                <Link to="/login" onClick={logout}>
+                  Sign Out
+                </Link>
+              ) : (
+                <Link to="/SignUp">Login</Link>
+              )}
             </li>
           </ul>
         </div>

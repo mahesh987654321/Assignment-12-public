@@ -40,7 +40,7 @@ const OrderDetails = ({ order, index }) => {
             onClick={() => handelDelete(_id)}
             class=" bg-red-700 btn-xs text-white"
           >
-            Delete
+            Cancel
           </button>
         </td>
         <td>
