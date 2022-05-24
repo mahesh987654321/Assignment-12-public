@@ -8,7 +8,7 @@ import CheckoutForm from "./CheckoutForm";
 
 const Payment = () => {
   const stripePromise = loadStripe(
-    "pk_test_51L0pZ4AUO7tB19c8Hva7oAiaVErByVwyQEaBJHFoSkyJ19tOngF9uJfyn9LsAtc5YFvxI1jQPIyEqzOwlVAC9mbW002aRWepBD"
+    "pk_test_51L2r1hDLd8c687tP0GromSllUauaZjrlz4IzddZW2ZZxFpo11nB6kdG8kQiAinrbSytjtD8ZoB8Af2HICjX4j8Ft00SeFEhKLx"
   );
   const { id } = useParams();
   const url = `http://localhost:5000/order/${id}`;
@@ -31,7 +31,7 @@ const Payment = () => {
             <div class="card w-96 bg-base-100 shadow-xl">
               <div class="card-body">
                 <Elements stripe={stripePromise}>
-                  <CheckoutForm />
+                  <CheckoutForm order={order} />
                 </Elements>
               </div>
             </div>
@@ -39,7 +39,7 @@ const Payment = () => {
           <div class="card-body">
             <div class="card w-96 bg-base-100 shadow-xl">
               <div class="card-body">
-                <h2>Order by: {order.name}</h2>
+                <h2>Ordered by: {order.name}</h2>
                 <p>Price is: {order.minimum}</p>
               </div>
             </div>

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const OrderDetails = ({ order, index }) => {
-  let paid = false;
   const { name, email, minimum, phone, _id } = order;
   const [orders, setOrders] = useState([]);
   useEffect(() => {
@@ -48,12 +47,12 @@ const OrderDetails = ({ order, index }) => {
           </button>
         </td>
         <td>
-          {minimum && !paid && (
+          {minimum && !order.paid && (
             <Link to={`/dashboard/payment/${_id}`}>
               <button class=" bg-primary btn-xs text-white">Pay</button>
             </Link>
           )}
-          {minimum && paid && <span className="text-red-700 ">Paid</span>}
+          {minimum && order.paid && <span className="text-red-700 ">Paid</span>}
         </td>
       </tr>
     </div>
