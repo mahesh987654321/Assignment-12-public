@@ -11,21 +11,11 @@ const MyOrder = () => {
   useEffect(() => {
     const getOrders = async () => {
       const email = user.email;
-      const url = `http://localhost:5000/order?email=${email}`;
+      const url = `http://localhost:5000/orders?email=${email}`;
       const { data } = await axios.get(url);
       setOrder(data);
     };
     getOrders();
-    // if (user) {
-    //   const email = user.email;
-    //   const url = `http://localhost:5000/order?email=${email}`;
-    //   fetch(url, {
-    //     method: "GET",
-    //     headers: {
-    //       authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-    //     },
-    //   });
-    // }
   }, [user, order]);
 
   return (

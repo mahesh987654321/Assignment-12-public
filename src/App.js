@@ -16,6 +16,9 @@ import Users from "./Page/component/Dashboard/Users";
 import ManageProducts from "./Page/component/Dashboard/ManageProducts";
 import AddProduct from "./Page/component/Dashboard/AddProduct";
 import ManageOrders from "./Page/component/Dashboard/ManageOrders";
+import MyPortfolio from "./Page/component/Dashboard/MyPortfolio";
+import NotFound from "./Page/component/NotFound";
+import Payment from "./Page/component/Dashboard/Payment";
 
 function App() {
   return (
@@ -26,11 +29,14 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signUp" element={<SignUp />}></Route>
         <Route path="/service/:id" element={<Purchase></Purchase>}></Route>
+        <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path="dashboard" element={<Dashboard></Dashboard>}>
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path="review" element={<Myreview></Myreview>}></Route>
+          <Route path="payment/:id" element={<Payment></Payment>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
           <Route path="users" element={<Users></Users>}></Route>
+
           <Route
             path="manageProduct"
             element={<ManageProducts></ManageProducts>}
@@ -45,6 +51,7 @@ function App() {
             element={<UpdateProfile></UpdateProfile>}
           ></Route>
         </Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       {/* <Footer></Footer> */}
     </div>

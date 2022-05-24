@@ -8,12 +8,13 @@ const ManageProducts = () => {
       .then((res) => res.json())
       .then((data) => {
         setService(data);
-        console.log(data);
       });
   }, [service]);
   return (
     <div>
-      <h1 className="text-4xl mx-20 font-bold text-center my-9">Manage Products</h1>
+      <h1 className="text-4xl mx-20 font-bold text-center my-9">
+        Manage Products
+      </h1>
       <div className="grid grid-cols-2 w-11/12 gap-36 mx-auto">
         {service.map((services) => (
           <ManageProductDetails services={services}></ManageProductDetails>

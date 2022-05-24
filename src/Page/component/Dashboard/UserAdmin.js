@@ -2,7 +2,7 @@ const { useState, useEffect } = require("react");
 
 const UserAdmin = (user) => {
   const [admin, setAdmin] = useState(false);
-  
+
   useEffect(() => {
     const email = user?.email;
     console.log(email);
@@ -17,7 +17,6 @@ const UserAdmin = (user) => {
         .then((res) => res.json())
         .then((data) => {
           setAdmin(data.admin);
-         
         });
     }
   }, [user]);

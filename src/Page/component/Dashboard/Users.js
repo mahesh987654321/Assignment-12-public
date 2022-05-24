@@ -3,7 +3,11 @@ import { useQuery } from "react-query";
 import Loading from "../Loading/Loading";
 import UserRow from "./UserRow";
 const Users = () => {
-  const { data: users, isLoading,refetch } = useQuery("users", () =>
+  const {
+    data: users,
+    isLoading,
+    refetch,
+  } = useQuery("users", () =>
     fetch("http://localhost:5000/users").then((res) => res.json())
   );
   if (isLoading) {
@@ -11,7 +15,8 @@ const Users = () => {
   }
   return (
     <div>
-      Users: {users?.length}
+      <h1 className="text-primary my-7 text-center">All Admin</h1>
+      <p className="text-center text-2xl text-secondary">Total Admin is: {users.length}</p>
       <div class="overflow-x-auto w-full">
         <table class="table w-full">
           <thead>

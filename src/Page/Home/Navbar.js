@@ -44,6 +44,10 @@ const Navbar = () => {
                 <a>About</a>
               </li>
               <li>
+                <Link to="/portfolio">My Portfolio</Link>
+              </li>
+
+              <li>
                 <a>Business Summary</a>
               </li>
               <li>
@@ -89,6 +93,9 @@ const Navbar = () => {
             <li>{user && <Link to="/dashboard">Dashboard</Link>}</li>
             <li>
               <a>About</a>
+            </li>
+            <li>
+              <Link to="/portfolio">My Portfolio</Link>
             </li>
             <li>
               <a>Business Summary</a>
