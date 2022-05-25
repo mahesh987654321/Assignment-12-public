@@ -1,18 +1,20 @@
 import React from "react";
-
+import "./Explore.css";
 const Explore = () => {
   return (
     <div>
       <div className="text-center">
         <h1 className="text-5xl text-primary font-bold mb-6">
-          Explore the Benefits
+          <span className="exp ">Explore the Benefits</span>
         </h1>
         <h1 className="text-2xl">
-          Rely on the Plex Smart Manufacturing Platform to connect, automate,
-          track, and analyze your operations.
+          <span className="rep">
+            Rely on the Plex Smart Manufacturing Platform to connect, automate,
+            track, and analyze your operations.
+          </span>
         </h1>
       </div>
-      <div className="grid grid-cols-2 w-9/12 mx-auto gap-10" >
+      <div className="grid grid-cols-1 lg:grid-cols-2  w-9/12 mx-auto gap-10">
         <div className="text-center w-6/12 mx-auto">
           <span class="material-symbols-outlined text-7xl">
             connect_without_contact

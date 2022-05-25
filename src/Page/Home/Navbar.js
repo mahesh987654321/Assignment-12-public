@@ -16,10 +16,10 @@ const Navbar = () => {
       <div class="navbar navbar-color font-bold">
         <div class="navbar-start">
           <div class="dropdown">
-            <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <label tabindex="0" class="btn btn-ghost button lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                class="h-5 w-5 "
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -36,23 +36,18 @@ const Navbar = () => {
               tabindex="0"
               class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <a>Parts</a>
+              
+              <li style={{ textDecoration: "none" }}>
+                {user && <Link to="/dashboard">Dashboard</Link>}
               </li>
-              <li>{user && <Link to="/dashboard">Dashboard</Link>}</li>
               <li>
                 <a>About</a>
               </li>
-              <li>
-                <Link to="/portfolio">My Portfolio</Link>
+              <li style={{ textDecoration: "none" }}>
+                <Link to="/portfolio">Portfolio</Link>
               </li>
 
-              <li>
-                <a>Business Summary</a>
-              </li>
-              <li>
-                <a>Reviews</a>
-              </li>
+             
               <li>
                 <Link to="/blogs">Blogs</Link>
               </li>
@@ -61,12 +56,12 @@ const Navbar = () => {
           </div>
 
           <div>
-            <Link to="/" class="btn btn-ghost normal-case text-xl">
-              Car Parts Factory
+            <Link style={{ textDecoration: "none" }} to="/" class="">
+              <p className="font-bold text-2xl car">Car Parts Factory</p>
             </Link>
           </div>
           <div>
-            <label for="my-drawer-2" class="drawer-button lg:hidden">
+            <label for="my-drawer-2" class="drawer-button svgs">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -87,32 +82,42 @@ const Navbar = () => {
 
         <div class="navbar-end hidden lg:flex">
           <ul class="menu menu-horizontal p-0">
+            
             <li>
-              <a>Parts</a>
+              {user && (
+                <Link style={{ textDecoration: "none" }} to="/dashboard">
+                  Dashboard
+                </Link>
+              )}
             </li>
-            <li>{user && <Link to="/dashboard">Dashboard</Link>}</li>
             <li>
               <a>About</a>
             </li>
             <li>
-              <Link to="/portfolio">My Portfolio</Link>
+              <Link style={{ textDecoration: "none" }} to="/portfolio">
+                Portfolio
+              </Link>
             </li>
+
+          
             <li>
-              <a>Business Summary</a>
-            </li>
-            <li>
-              <a>Reviews</a>
-            </li>
-            <li>
-              <Link to="/blogs">Blogs</Link>
+              <Link style={{ textDecoration: "none" }} to="/blogs">
+                Blogs
+              </Link>
             </li>
             <li>
               {user ? (
-                <Link to="/login" onClick={logout}>
+                <Link
+                  style={{ textDecoration: "none" }}
+                  to="/login"
+                  onClick={logout}
+                >
                   Sign Out
                 </Link>
               ) : (
-                <Link to="/SignUp">Login</Link>
+                <Link style={{ textDecoration: "none" }} to="/SignUp">
+                  Login
+                </Link>
               )}
             </li>
           </ul>

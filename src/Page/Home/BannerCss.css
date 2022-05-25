@@ -12,3 +12,12 @@
   text-align: center;
   color: white;
 }
+@media only screen and (max-width: 600px) {
+  .dash {
+    font-size: 12px;
+    line-height: 2px;
+  }
+  .wdth {
+    width: 100vw;
+  }
+}

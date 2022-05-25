@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
+import './ToolDetails.css'
 const ToolsDetails = ({ services }) => {
   const {
     name,
@@ -29,8 +29,8 @@ const ToolsDetails = ({ services }) => {
           <p>Available Quantity: ${availablQuantity} </p>
           <p>Price per Unit: ${pricePerUnit}</p>
           <div class="card-actions justify-end">
-            <button onClick={() => handelTools()} class="btn btn-primary">
-              Buy Now
+            <button className="tddd" onClick={() => handelTools()} class="btn btn-primary">
+              <span className="td bg-primary text-white p-2 rounded-lg">Buy Now</span>
             </button>
           </div>
         </div>

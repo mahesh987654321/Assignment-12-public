@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Rating } from "@mui/material";
+import { Box } from "@mui/system";
 const ReviewDetails = ({ person }) => {
   const { image, name, comment } = person;
   return (
@@ -16,7 +17,7 @@ const ReviewDetails = ({ person }) => {
           <h2 class="card-title">{name}</h2>
           <p>{comment}</p>
         </div>
-        <div>
+        {/* <div>
           <div class="rating rating-sm">
             <input
               type="radio"
@@ -45,7 +46,12 @@ const ReviewDetails = ({ person }) => {
               class="mask mask-star-2 bg-orange-400"
             />
           </div>
-        </div>
+        </div> */}
+        <Box>
+          <Rating
+          defaultValue={3}
+          ></Rating>
+        </Box>
       </div>
     </div>
   );

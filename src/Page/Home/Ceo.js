@@ -1,10 +1,10 @@
 import React from "react";
-
+import "./Ceo.css";
 const Ceo = () => {
   return (
     <div>
       <h1 className="text-5xl text-primary font-bold text-center my-20">
-        About Our Ceo
+        <span className="aoi"> About Our Ceo</span>
       </h1>
       <div class="hero mb-10">
         <div class="hero-content flex-col lg:flex-row">
@@ -13,7 +13,9 @@ const Ceo = () => {
             class="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
-            <h1 class="text-5xl font-bold">Box Office News!</h1>
+            <h1 class="text-5xl text-center font-bold">
+              <span className="will">MRS. William Sarry</span>
+            </h1>
             <p class="py-6">
               At Mrs.Alexander Hughes, our best feature is our global team of
               highly professional and knowledgeable individuals, who, through
