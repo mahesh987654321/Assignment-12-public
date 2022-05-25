@@ -11,7 +11,7 @@ const Payment = () => {
     "pk_test_51L2r1hDLd8c687tP0GromSllUauaZjrlz4IzddZW2ZZxFpo11nB6kdG8kQiAinrbSytjtD8ZoB8Af2HICjX4j8Ft00SeFEhKLx"
   );
   const { id } = useParams();
-  const url = `http://localhost:5000/order/${id}`;
+  const url = `https://secure-beach-51021.herokuapp.com/order/${id}`;
   const { data: order, isLoading } = useQuery(["order", id], () =>
     fetch(url, {
       method: "GET",

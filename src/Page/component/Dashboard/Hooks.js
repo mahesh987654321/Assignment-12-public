@@ -6,7 +6,7 @@ const Hooks = () => {
 
   useEffect(() => {
     const getOrders = async () => {
-      const url = `http://localhost:5000/create-payment-intent`;
+      const url = `https://secure-beach-51021.herokuapp.com/create-payment-intent`;
       const { data } = await axios.get(url);
       setOrders(data);
     };

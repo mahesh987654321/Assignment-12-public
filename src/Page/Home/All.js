@@ -4,7 +4,7 @@ import AllDetails from "./AllDetails";
 const All = () => {
   const [all, setAll] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/service`)
+    fetch(`https://secure-beach-51021.herokuapp.com/service`)
       .then((res) => res.json())
       .then((data) => setAll(data));
   }, [all]);

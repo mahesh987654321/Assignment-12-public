@@ -4,7 +4,7 @@ import ManageProductDetails from "./ManageProductDetails";
 const ManageProducts = () => {
   const [service, setService] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/service`)
+    fetch(`https://secure-beach-51021.herokuapp.com/service`)
       .then((res) => res.json())
       .then((data) => {
         setService(data);

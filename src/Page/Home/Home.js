@@ -16,7 +16,7 @@ const Home = () => {
       <Review></Review>
       <Ceo></Ceo>
       <Explore></Explore>
-      
+      <Footer></Footer>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const ManageProductDetails = ({ services }) => {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     const getOrders = async () => {
-      const url = `http://localhost:5000/service`;
+      const url = `https://secure-beach-51021.herokuapp.com/service`;
       const { data } = await axios.get(url);
       setOrders(data);
     };
@@ -28,7 +28,7 @@ const ManageProductDetails = ({ services }) => {
   const handelDelete = (id) => {
     const sure = window.confirm("Are you sure eto confirm delete");
     if (sure) {
-      const url = `http://localhost:5000/service/${id}`;
+      const url = `https://secure-beach-51021.herokuapp.com/service/${id}`;
       fetch(url, {
         method: "DELETE",
       })

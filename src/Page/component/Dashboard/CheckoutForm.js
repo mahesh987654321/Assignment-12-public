@@ -10,7 +10,7 @@ const CheckoutForm = ({ order }) => {
   const [clientSecret, setClientSecret] = useState("");
   const [transsationId, setTransationId] = useState("");
   useEffect(() => {
-    fetch(`http://localhost:5000/create-payment-intent`, {
+    fetch(`https://secure-beach-51021.herokuapp.com/create-payment-intent`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -69,7 +69,7 @@ const CheckoutForm = ({ order }) => {
         order: _id,
         transsationId: paymentIntent.id,
       };
-      fetch(`http://localhost:5000/order/${_id}`, {
+      fetch(`https://secure-beach-51021.herokuapp.com/order/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

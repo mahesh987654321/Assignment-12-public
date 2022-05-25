@@ -17,22 +17,61 @@ const Dashboard = () => {
         <div class="drawer-side">
           <label for="my-drawer-2" class="drawer-overlay"></label>
           <ul class="menu p-4 overflow-y-auto w-80 bg-slate-300 text-base-content">
-            <li>{!admin && <Link to="/dashboard/order">My Orders</Link>}</li>
-            <li>{!admin && <Link to="/dashboard/review">My Review</Link>}</li>
             <li>
-              <Link to="/dashboard/profile">My Profile</Link>
-            </li>
-            <li>{admin && <Link to="/dashboard/users">Make Admin</Link>}</li>
-            <li>
-              {admin && (
-                <Link to="/dashboard/manageProduct">Manage Products</Link>
+              {!admin && (
+                <Link style={{ textDecoration: "none" }} to="/dashboard/order">
+                  My Orders
+                </Link>
               )}
             </li>
             <li>
-              {admin && <Link to="/dashboard/addProduct">Add Products</Link>}
+              {!admin && (
+                <Link style={{ textDecoration: "none" }} to="/dashboard/review">
+                  My Review
+                </Link>
+              )}
             </li>
             <li>
-              {admin && <Link to="/dashboard/manageOrder">Manage Orders</Link>}
+              <Link style={{ textDecoration: "none" }} to="/dashboard/profile">
+                My Profile
+              </Link>
+            </li>
+            <li>
+              {admin && (
+                <Link style={{ textDecoration: "none" }} to="/dashboard/users">
+                  Make Admin
+                </Link>
+              )}
+            </li>
+            <li>
+              {admin && (
+                <Link
+                  style={{ textDecoration: "none" }}
+                  to="/dashboard/manageProduct"
+                >
+                  Manage Products
+                </Link>
+              )}
+            </li>
+            <li>
+              {admin && (
+                <Link
+                  style={{ textDecoration: "none" }}
+                  to="/dashboard/addProduct"
+                >
+                  Add Products
+                </Link>
+              )}
+            </li>
+            <li>
+              {admin && (
+                <Link
+                  style={{ textDecoration: "none" }}
+                  to="/dashboard/manageOrder"
+                >
+                  Manage Orders
+                </Link>
+              )}
             </li>
           </ul>
         </div>

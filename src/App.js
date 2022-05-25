@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./Page/Home/Home";
 import Footer from "./Page/Footer/Footer";
-
 import Navbar from "./Page/Home/Navbar";
 import Login from "./Page/component/Login/Login";
 import SignUp from "./Page/component/Login/SignUp";
@@ -23,6 +22,7 @@ import All from "./Page/Home/All";
 import RequireAuth from "./Page/Home/RequireAuth";
 import Modal from "../../my-app/src/Page/component/Dashboard/Modal";
 import Blogs from "./Page/Home/Blogs";
+import About from "./Page/Home/About";
 function App() {
   return (
     <div className="App">
@@ -31,6 +31,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signUp" element={<SignUp />}></Route>
+        <Route path="/about" element={<About />}></Route>
 
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route
@@ -67,7 +68,7 @@ function App() {
         </Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 }

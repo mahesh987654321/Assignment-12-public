@@ -13,7 +13,7 @@ const MyProfile = () => {
 
   useEffect(() => {
     const getOrders = async () => {
-      const url = `http://localhost:5000/profile`;
+      const url = `https://secure-beach-51021.herokuapp.com/profile`;
       const { data } = await axios.get(url);
       setOrders(data);
     };
@@ -35,7 +35,7 @@ const MyProfile = () => {
     //   }
     //   event.target.reset();
     // });
-    fetch(`http://localhost:5000/profile`, {
+    fetch(`https://secure-beach-51021.herokuapp.com/profile`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

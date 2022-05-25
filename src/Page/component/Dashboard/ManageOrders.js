@@ -7,7 +7,7 @@ const ManageOrders = () => {
   const [product, serProduct] = useState([]);
   useEffect(() => {
     const getOrders = async () => {
-      const url = `http://localhost:5000/order`;
+      const url = `https://secure-beach-51021.herokuapp.com/order`;
       const { data } = await axios.get(url);
       setOrders(data);
     };

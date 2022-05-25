@@ -11,7 +11,7 @@ const MyOrder = () => {
   useEffect(() => {
     const getOrders = async () => {
       const email = user.email;
-      const url = `http://localhost:5000/orders?email=${email}`;
+      const url = `https://secure-beach-51021.herokuapp.com/orders?email=${email}`;
       const { data } = await axios.get(url);
       setOrder(data);
     };

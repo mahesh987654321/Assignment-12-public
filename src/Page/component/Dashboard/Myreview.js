@@ -13,14 +13,16 @@ const Myreview = () => {
       comment: event.target.comment.value,
     };
 
-    axios.post("http://localhost:5000/review", order).then((res) => {
-      const { data } = res;
-      console.log(data);
-      if (data.insertedId) {
-        alert("Inserted Id");
-      }
-      event.target.reset();
-    });
+    axios
+      .post("https://secure-beach-51021.herokuapp.com/review", order)
+      .then((res) => {
+        const { data } = res;
+        console.log(data);
+        if (data.insertedId) {
+          alert("Inserted Id");
+        }
+        event.target.reset();
+      });
   };
   return (
     <div className="mt-10">

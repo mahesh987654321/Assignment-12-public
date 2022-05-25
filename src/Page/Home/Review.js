@@ -7,7 +7,7 @@ const Review = () => {
 
   useEffect(() => {
     const getOrders = async () => {
-      const url = `http://localhost:5000/review`;
+      const url = `https://secure-beach-51021.herokuapp.com/review`;
       const { data } = await axios.get(url);
       setOrders(data);
     };

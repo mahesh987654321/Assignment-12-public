@@ -24,14 +24,16 @@ const Purchase = () => {
       minimumQuantity: event.target.minimumQuantity.value,
     };
 
-    axios.post("http://localhost:5000/order", order).then((res) => {
-      const { data } = res;
-      console.log(data);
-      if (data.insertedId) {
-        alert("Inserted Id");
-      }
-      event.target.reset();
-    });
+    axios
+      .post("https://secure-beach-51021.herokuapp.com/order", order)
+      .then((res) => {
+        const { data } = res;
+        console.log(data);
+        if (data.insertedId) {
+          alert("Inserted Id");
+        }
+        event.target.reset();
+      });
     if (event.target.availablQuantity.value < 100) {
       alert("Not allowed");
     }
@@ -45,7 +47,7 @@ const Purchase = () => {
   const [minus, setMinus] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/service/${id}`)
+    fetch(`https://secure-beach-51021.herokuapp.com/service/${id}`)
       .then((res) => res.json())
       .then((data) => setPurchase(data));
   }, [id]);

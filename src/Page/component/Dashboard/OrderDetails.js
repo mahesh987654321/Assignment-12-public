@@ -86,7 +86,7 @@ const OrderDetails = ({ order, index }) => {
 
   useEffect(() => {
     const getOrders = async () => {
-      const url = `http://localhost:5000/order`;
+      const url = `https://secure-beach-51021.herokuapp.com/order`;
       const { data } = await axios.get(url);
       setOrders(data);
     };
@@ -99,7 +99,7 @@ const OrderDetails = ({ order, index }) => {
   const handelDelete = (id) => {
     const sure = window.confirm("Are you sure eto confirm delete");
     if (sure) {
-      const url = `http://localhost:5000/order/${id}`;
+      const url = `https://secure-beach-51021.herokuapp.com/order/${id}`;
       fetch(url, {
         method: "DELETE",
       })

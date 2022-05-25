@@ -14,13 +14,15 @@ const AddProduct = () => {
       availablQuantity: event.target.availablQuantity.value,
       pricePerUnit: event.target.pricePerUnit.value,
     };
-    axios.post("http://localhost:5000/service", order).then((res) => {
-      const { data } = res;
-      if (data.insertedId) {
-        alert("Inserted Id");
-      }
-      event.target.reset();
-    });
+    axios
+      .post("https://secure-beach-51021.herokuapp.com/service", order)
+      .then((res) => {
+        const { data } = res;
+        if (data.insertedId) {
+          alert("Inserted Id");
+        }
+        event.target.reset();
+      });
   };
   return (
     <div>
