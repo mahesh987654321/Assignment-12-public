@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useUpdateProfile } from "react-firebase-hooks/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
@@ -6,25 +6,50 @@ import UpdateProfile from "./UpdateProfile";
 import auth from "../../../firebaseinit";
 import { updatePhoneNumber } from "firebase/auth";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import ServiceDetails from "./ServiceDetails";
 const MyProfile = () => {
+  const [orders, setOrders] = useState([]);
+
+  useEffect(() => {
+    const getOrders = async () => {
+      const url = `http://localhost:5000/profile`;
+      const { data } = await axios.get(url);
+      setOrders(data);
+    };
+    getOrders();
+  }, [orders]);
   const [user] = useAuthState(auth);
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data, event) => {
+    console.log(data);
+    const order = {
+      socialLink: event.target.socialLink.value,
+      Location: event.target.Location.value,
+      Profession: event.target.Profession.value,
+    };
+    // axios.post("http://localhost:5000/profile", order).then((res) => {
+    //   const { data } = res;
+    //   if (data.insertedId) {
+    //     alert("Inserted Id");
+    //   }
+    //   event.target.reset();
+    // });
+    fetch(`http://localhost:5000/profile`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(order),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Data inside use token", data);
+        event.target.reset();
+      });
+  };
   const [displayName, setDisplayName] = useState("");
-  // const [photoURL, setPhotoURL] = useState("");
-  // const [phone, setPhone] = useState("");
-  // const [updateProfile, updating, error] = useUpdateProfile(auth);
 
-  // if (error) {
-  //   return (
-  //     <div>
-  //       <p>Error: {error.message}</p>
-  //     </div>
-  //   );
-  // }
-  // if (updating) {
-  //   return <p>Updating...</p>;
-  // }
   return (
     <div>
       <div class="card lg:card-side bg-base-100 shadow-xl">
@@ -39,6 +64,7 @@ const MyProfile = () => {
           <p>UserId: {user?.metadata?.createdAt}</p>
           <p>Name: {user?.displayName}</p>
           <p>Email: {user?.email}</p>
+
           <p>
             Phone:{" "}
             {user?.phoneNumber ? (
@@ -48,6 +74,11 @@ const MyProfile = () => {
             )}
           </p>
           <p>Creation Time: {user?.metadata?.creationTime}</p>
+          <p>
+            {orders.map((service) => (
+              <ServiceDetails service={service}></ServiceDetails>
+            ))}
+          </p>
           <div className="mx-auto w-3/6">
             <form onSubmit={handleSubmit(onSubmit)}>
               <input

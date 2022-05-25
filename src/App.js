@@ -19,7 +19,10 @@ import ManageOrders from "./Page/component/Dashboard/ManageOrders";
 import MyPortfolio from "./Page/component/Dashboard/MyPortfolio";
 import NotFound from "./Page/component/NotFound";
 import Payment from "./Page/component/Dashboard/Payment";
-
+import All from "./Page/Home/All";
+import RequireAuth from "./Page/Home/RequireAuth";
+import Modal from "../../my-app/src/Page/component/Dashboard/Modal";
+import Blogs from "./Page/Home/Blogs";
 function App() {
   return (
     <div className="App">
@@ -28,12 +31,23 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signUp" element={<SignUp />}></Route>
-        <Route path="/service/:id" element={<Purchase></Purchase>}></Route>
+
+        <Route path="/blogs" element={<Blogs />}></Route>
+        <Route
+          path="/service/:id"
+          element={
+            <RequireAuth>
+              <Purchase></Purchase>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route path="/all" element={<All></All>}></Route>
         <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path="dashboard" element={<Dashboard></Dashboard>}>
-          <Route index element={<MyOrder></MyOrder>}></Route>
+          <Route path="order" element={<MyOrder></MyOrder>}></Route>
           <Route path="review" element={<Myreview></Myreview>}></Route>
           <Route path="payment/:id" element={<Payment></Payment>}></Route>
+          <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
           <Route path="users" element={<Users></Users>}></Route>
 
@@ -53,7 +67,7 @@ function App() {
         </Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   );
 }

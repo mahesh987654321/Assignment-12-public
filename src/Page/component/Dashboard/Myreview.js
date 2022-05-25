@@ -6,6 +6,7 @@ import auth from "../../../firebaseinit";
 import "./Myreview.css";
 const Myreview = () => {
   const [user] = useAuthState(auth);
+  console.log(user);
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
     const order = {

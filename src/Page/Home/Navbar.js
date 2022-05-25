@@ -54,7 +54,7 @@ const Navbar = () => {
                 <a>Reviews</a>
               </li>
               <li>
-                <a>Blogs</a>
+                <Link to="/blogs">Blogs</Link>
               </li>
               <li>{}</li>
             </ul>
@@ -104,7 +104,7 @@ const Navbar = () => {
               <a>Reviews</a>
             </li>
             <li>
-              <a>Blogs</a>
+              <Link to="/blogs">Blogs</Link>
             </li>
             <li>
               {user ? (

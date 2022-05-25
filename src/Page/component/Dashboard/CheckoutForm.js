@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import OrderDetails from "./OrderDetails";
 const CheckoutForm = ({ order }) => {
   console.log(order);
   const [cardError, setCardError] = useState("");

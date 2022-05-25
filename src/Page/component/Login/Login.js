@@ -80,15 +80,12 @@ const Login = () => {
         </Form.Group>
         {errorElement}
         <p>{error1}</p>
-        <button
-          onClick={() => signInWithGoogle()}
-          className="bg-dark text-white"
-        >
+        <button onClick={() => signInWithGoogle()} className="btn btn-primary">
           Sign in with Google
         </button>
         <div className="d-flex justify-content-around align-items-center">
-          <p>Forgot Password</p>
           <button
+          className="bg-primary p-1 mt-2"
             onClick={async () => {
               await sendPasswordResetEmail(email);
               alert("Sent email");
@@ -97,7 +94,9 @@ const Login = () => {
             Reset password
           </button>
         </div>
-        <Link to="/SignUp">Don't have a account Please Regester</Link>
+        <Link className="text-red-800 decoration-solid" to="/SignUp">
+          Don't have a account Please Regester
+        </Link>
         <Button className="w-100" variant="primary" type="submit">
           Submit
         </Button>

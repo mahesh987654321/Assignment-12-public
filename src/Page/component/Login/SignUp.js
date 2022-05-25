@@ -83,17 +83,18 @@ const SignUp = () => {
           />
           <p className="text-danger">{error1}</p>
         </Form.Group>
-        <Link to="/login">Already Have a account</Link>
+        <Link className="text-black" to="/login">Already Have a account</Link>
         <br />
         <button
           onClick={() => signInWithGoogle()}
-          className="bg-dark text-white"
+          className="btn btn-primary text-white"
         >
           Sign in with Google
         </button>
         <div className="d-flex justify-content-around">
-          <p>Forgot password</p>{" "}
+
           <button
+          className="bg-primary p-1 mt-2 mb-2"
             onClick={async () => {
               await sendPasswordResetEmail(email);
               toast("Sent email");
