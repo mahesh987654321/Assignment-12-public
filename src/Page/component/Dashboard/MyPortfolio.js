@@ -2,10 +2,10 @@ import React from "react";
 
 const MyPortfolio = () => {
   return (
-    <div >
+    <div>
       <h1 className="text-center text-primary my-5">MY PORTFOLIO</h1>
-      <div class="overflow-x-auto w-9/12 mx-auto">
-        <table class="table w-full">
+      <div class="overflow-x-auto w-9/12 mx-auto ">
+        <table class="table  h-full">
           <tbody>
             <tr>
               <th>1</th>

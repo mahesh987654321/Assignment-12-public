@@ -7,7 +7,7 @@ const Banner = () => {
       <img
         src="https://etimg.etb2bimg.com/photo/85652320.cms"
         alt=""
-        className="h-2/4 w-full banner-imgHeight"
+        className="w-full h-full banner-imgHeight"
       />
       <div class="centered text-4xl font-bold wdth">
         <span className="dash">YOU CAN GET BEST CARS BODY PARTS</span>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import './ToolDetails.css'
+import "./ToolDetails.css";
 const ToolsDetails = ({ services }) => {
   const {
     name,
@@ -18,7 +18,7 @@ const ToolsDetails = ({ services }) => {
   };
   return (
     <div>
-      <div class="card h-100 card-compact w-96 bg-base-100 shadow-xl">
+      <div class="card h-full card-compact w-96 bg-base-100 shadow-xl ">
         <figure>
           <img src={image} alt="Shoes" />
         </figure>
@@ -29,8 +29,14 @@ const ToolsDetails = ({ services }) => {
           <p>Available Quantity: ${availablQuantity} </p>
           <p>Price per Unit: ${pricePerUnit}</p>
           <div class="card-actions justify-end">
-            <button className="tddd" onClick={() => handelTools()} class="btn btn-primary">
-              <span className="td bg-primary text-white p-2 rounded-lg">Buy Now</span>
+            <button
+              className="tddd"
+              onClick={() => handelTools()}
+              class="btn btn-primary"
+            >
+              <span className="td bg-primary text-white p-2 rounded-lg">
+                Buy Now
+              </span>
             </button>
           </div>
         </div>
