@@ -25,20 +25,20 @@ const Payment = () => {
   }
   return (
     <div>
-      <div class="hero min-h-screen">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <div class="card-body">
-            <div class="card w-96 bg-base-100 shadow-xl">
-              <div class="card-body">
+      <div className="hero min-h-screen">
+        <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="card-body">
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <div className="card-body">
                 <Elements stripe={stripePromise}>
                   <CheckoutForm order={order} />
                 </Elements>
               </div>
             </div>
           </div>
-          <div class="card-body">
-            <div class="card w-96 bg-base-100 shadow-xl">
-              <div class="card-body">
+          <div className="card-body">
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <div className="card-body">
                 <h2>Ordered by: {order.name}</h2>
                 <p>Price is: {order.minimum}</p>
               </div>

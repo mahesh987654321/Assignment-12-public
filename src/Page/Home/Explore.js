@@ -16,7 +16,7 @@ const Explore = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2  w-9/12 mx-auto gap-10">
         <div className="text-center w-6/12 mx-auto">
-          <span class="material-symbols-outlined text-7xl">
+          <span className="material-symbols-outlined text-7xl">
             connect_without_contact
           </span>
           <div className=" text-2xl font-bold">Connect</div>
@@ -26,7 +26,7 @@ const Explore = () => {
           </div>
         </div>
         <div className="text-center w-6/12 mx-auto">
-          <span class="material-symbols-outlined text-7xl">autorenew</span>
+          <span className="material-symbols-outlined text-7xl">autorenew</span>
           <div className=" text-2xl font-bold">Automate</div>
           <div>
             Remove error-prone manual processes. Automate business processes to
@@ -34,7 +34,9 @@ const Explore = () => {
           </div>
         </div>
         <div className="text-center w-6/12 mx-auto">
-          <span class="material-symbols-outlined text-7xl">data_saver_on</span>
+          <span className="material-symbols-outlined text-7xl">
+            data_saver_on
+          </span>
           <div className=" text-2xl font-bold">Track</div>
           <div>
             Get a clear picture of your company. Track data from the plant floor
@@ -42,7 +44,7 @@ const Explore = () => {
           </div>
         </div>
         <div className="text-center w-6/12 mx-auto">
-          <span class="material-symbols-outlined text-7xl">analytics</span>
+          <span className="material-symbols-outlined text-7xl">analytics</span>
           <div className=" text-2xl font-bold">Analyze</div>
           <div>
             Make better decisions. Analyze the information that matters most.

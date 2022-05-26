@@ -20,9 +20,9 @@ const MyOrder = () => {
 
   return (
     <div>
-      <div class="overflow-x-auto">
+      <div className="overflow-x-auto">
         <h1 className="text-center text-primary mx-10">My Orders</h1>
-        <table class="table table-zebra w-full">
+        <table className="table table-zebra w-full">
           <thead>
             <tr>
               <th>Index</th>

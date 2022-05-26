@@ -18,9 +18,11 @@ const Users = () => {
   return (
     <div>
       <h1 className="text-primary my-7 text-center">All Admin</h1>
-      <p className="text-center text-2xl text-secondary">Total Admin is: {users.length}</p>
-      <div class="overflow-x-auto w-full">
-        <table class="table w-full">
+      <p className="text-center text-2xl text-secondary">
+        Total Admin is: {users.length}
+      </p>
+      <div className="overflow-x-auto w-full">
+        <table className="table w-full">
           <thead>
             <tr>
               <th>

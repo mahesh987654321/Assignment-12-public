@@ -14,7 +14,7 @@ const Summary = () => {
       <div className="grid grid-cols-1 lg:grid-cols-4 text-center w-10/12 mx-auto gap-20">
         <div>
           <div>
-            <span class="material-symbols-outlined text-9xl text-primary">
+            <span className="material-symbols-outlined text-9xl text-primary">
               flag
             </span>
           </div>
@@ -23,7 +23,7 @@ const Summary = () => {
         </div>
         <div>
           <div>
-            <span class="material-symbols-outlined text-9xl text-primary">
+            <span className="material-symbols-outlined text-9xl text-primary">
               task
             </span>
           </div>
@@ -36,7 +36,7 @@ const Summary = () => {
         </div>
         <div>
           <div>
-            <span class="material-symbols-outlined text-9xl text-primary">
+            <span className="material-symbols-outlined text-9xl text-primary">
               group_add
             </span>
           </div>
@@ -47,7 +47,7 @@ const Summary = () => {
         </div>
         <div>
           <div>
-            <span class="material-symbols-outlined text-9xl text-primary">
+            <span className="material-symbols-outlined text-9xl text-primary">
               comment
             </span>
           </div>
@@ -71,10 +71,10 @@ const Summary = () => {
           </p>
         </div>
         <div className="">
-          <button class="btn btn-primary text-white mr-10">
+          <button className="btn btn-primary text-white mr-10">
             Request for Quote
           </button>
-          <button class="btn btn-accent">Contact Us</button>
+          <button className="btn btn-accent">Contact Us</button>
         </div>
       </div>
     </div>

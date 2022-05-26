@@ -45,26 +45,26 @@ const ManageProductDetails = ({ services }) => {
   return (
     <div>
       <ToastContainer />
-      <div class="card h-100 card-compact w-96 bg-base-100 shadow-xl">
+      <div className="card h-100 card-compact w-96 bg-base-100 shadow-xl">
         <figure>
           <img src={image} alt="Shoes" />
         </figure>
-        <div class="card-body">
-          <h2 class="card-title">{name}</h2>
+        <div className="card-body h-full">
+          <h2 className="card-title">{name}</h2>
           <p>Details: {Description}</p>
           <p>Minimum Quantity: ${minimumQuantity}</p>
           <p>Available Quantity: ${availablQuantity} </p>
           <p>Price per Unit: ${pricePerUnit}</p>
-          <div class="flex justify-between">
+          <div className="flex justify-between">
             <div className="flex justify-between">
-              <button onClick={() => handelAdd()} class="btn btn-primary">
+              <button onClick={() => handelAdd()} className="btn btn-primary">
                 Buy Now
               </button>
             </div>
             <div>
               <button
                 onClick={() => handelDelete(_id)}
-                class="bg-red-800 p-3 text-white pl-3 text-center"
+                className="bg-red-800 p-3 text-white pl-3 text-center"
               >
                 Delete
               </button>

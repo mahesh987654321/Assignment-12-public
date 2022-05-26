@@ -18,21 +18,21 @@ const ToolsDetails = ({ services }) => {
   };
   return (
     <div>
-      <div class="card h-full card-compact w-96 bg-base-100 shadow-xl ">
+      <div className="card h-full card-compact w-96 bg-base-100 shadow-xl ">
         <figure>
           <img src={image} alt="Shoes" />
         </figure>
-        <div class="card-body">
-          <h2 class="card-title">{name}</h2>
+        <div className="card-body">
+          <h2 className="card-title">{name}</h2>
           <p>Details: {Description}</p>
           <p>Minimum Quantity: ${minimumQuantity}</p>
           <p>Available Quantity: ${availablQuantity} </p>
           <p>Price per Unit: ${pricePerUnit}</p>
-          <div class="card-actions justify-end">
+          <div className="card-actions justify-end">
             <button
               className="tddd"
               onClick={() => handelTools()}
-              class="btn btn-primary"
+              className="btn btn-primary"
             >
               <span className="td bg-primary text-white p-2 rounded-lg">
                 Buy Now

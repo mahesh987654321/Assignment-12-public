@@ -51,7 +51,7 @@
 //             {!order.paid && (
 //               <button
 //                 onClick={() => handelDelete(_id)}
-//                 class=" bg-red-700 btn-xs text-white"
+//                 className=" bg-red-700 btn-xs text-white"
 //               >
 //                 Cancel
 //               </button>
@@ -60,7 +60,7 @@
 //           <td>
 //             {minimum && !order.paid && (
 //               <Link to={`/dashboard/payment/${_id}`}>
-//                 <button class=" bg-primary btn-xs text-white">Pay</button>
+//                 <button className=" bg-primary btn-xs text-white">Pay</button>
 //               </Link>
 //             )}
 //             {minimum && order.paid && (
@@ -124,15 +124,12 @@ const OrderDetails = ({ order, index }) => {
           <td>{minimum}</td>
           <td>{phone ? phone : <p className="text-red-700">No number</p>}</td>
           <td>
-          <div>
-            
-          </div>
-             
+            <div></div>
           </td>
           <td>
             {minimum && !order.paid && (
               <Link to={`/dashboard/payment/${_id}`}>
-                <button class=" bg-primary btn-xs text-white">Pay</button>
+                <button className=" bg-primary btn-xs text-white">Pay</button>
               </Link>
             )}
             {minimum && order.paid && (

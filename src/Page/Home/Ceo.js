@@ -6,17 +6,17 @@ const Ceo = () => {
       <h1 className="text-5xl text-primary font-bold text-center my-20">
         <span className="aoi"> About Our Ceo</span>
       </h1>
-      <div class="hero mb-10">
-        <div class="hero-content flex-col lg:flex-row">
+      <div className="hero mb-10">
+        <div className="hero-content flex-col lg:flex-row">
           <img
             src="https://cdn.cdnparenting.com/articles/2019/01/08144644/1211306812-H.webp"
-            class="max-w-sm rounded-lg shadow-2xl"
+            className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
-            <h1 class="text-5xl text-center font-bold">
+            <h1 className="text-5xl text-center font-bold">
               <span className="will">MRS. William Sarry</span>
             </h1>
-            <p class="py-6">
+            <p className="py-6">
               At Mrs.Alexander Hughes, our best feature is our global team of
               highly professional and knowledgeable individuals, who, through
               their hard work, passion, dedication and perceptiveness,

@@ -4,8 +4,8 @@ const MyPortfolio = () => {
   return (
     <div>
       <h1 className="text-center text-primary my-5">MY PORTFOLIO</h1>
-      <div class="overflow-x-auto w-9/12 mx-auto ">
-        <table class="table  h-full">
+      <div className="overflow-x-auto w-9/12 mx-auto ">
+        <table className="table  h-full">
           <tbody>
             <tr>
               <th>1</th>
@@ -24,7 +24,7 @@ const MyPortfolio = () => {
               <td>Education</td>
               <td>BBA HONOURS 2nd year</td>
             </tr>
-            <tr class="active">
+            <tr className="active">
               <th>4</th>
               <td>List of skills I have as a web developer</td>
               <td>
@@ -42,17 +42,17 @@ const MyPortfolio = () => {
               <td>Address</td>
               <td>Narail sadar Narail</td>
             </tr>
-            <tr class="active">
+            <tr className="active">
               <th>7</th>
               <td>Project Link 1</td>
               <td>Tax Accountant</td>
             </tr>
-            <tr class="active">
+            <tr className="active">
               <th>8</th>
               <td>Project Link 2</td>
               <td>Tax Accountant</td>
             </tr>
-            <tr class="active">
+            <tr className="active">
               <th>9</th>
               <td>Project Link 3</td>
               <td>Tax Accountant</td>

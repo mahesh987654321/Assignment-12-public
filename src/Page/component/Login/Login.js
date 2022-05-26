@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
- import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
@@ -49,7 +49,6 @@ const Login = () => {
     }
   };
 
-  
   if (token) {
     navigate(from, { replace: true });
   }
@@ -66,7 +65,7 @@ const Login = () => {
           onBlur={handelEmail}
           type="email"
           placeholder="Enter email"
-          class="input input-bordered input-success w-full mb-5"
+          className="input input-bordered input-success w-full mb-5"
         />{" "}
         <label htmlFor="">Password</label>
         <br />
@@ -74,7 +73,7 @@ const Login = () => {
           onBlur={handelPassword}
           type="password"
           placeholder="Enter Password"
-          class="input input-bordered input-success w-full mb-5"
+          className="input input-bordered input-success w-full mb-5"
         />{" "}
         {errorElement}
         <p>{error1}</p>

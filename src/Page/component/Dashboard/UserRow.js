@@ -31,9 +31,9 @@ const UserRow = ({ user, refetch }) => {
       <ToastContainer />
       <th></th>
       <td>
-        <div class="flex items-center space-x-3">
-          <div class="avatar">
-            <div class="mask mask-squircle w-12 h-12">
+        <div className="flex items-center space-x-3">
+          <div className="avatar">
+            <div className="mask mask-squircle w-12 h-12">
               <img
                 src="https://www.whitechapelgallery.org/wp-content/uploads/2020/07/blank-head-profile-pic-for-a-man.jpg"
                 alt="No Image"
@@ -45,13 +45,13 @@ const UserRow = ({ user, refetch }) => {
       <td>{email}</td>
       <td>
         {role !== "admin" && (
-          <button onClick={makeAdmin} class="btn btn-sm btn-primary">
+          <button onClick={makeAdmin} className="btn btn-sm btn-primary">
             Make Admin
           </button>
         )}
       </td>
       <td>
-        <button class="text-white rounded btn-sm bg-red-700">
+        <button className="text-white rounded btn-sm bg-red-700">
           Remove user
         </button>
       </td>

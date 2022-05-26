@@ -49,15 +49,15 @@ const MyProfile = () => {
   return (
     <div>
       <ToastContainer />
-      <div class="card lg:card-side bg-base-100 shadow-xl">
+      <div className="card lg:card-side bg-base-100 shadow-xl">
         <figure>
-          <div class="">
-            {/* <div class="w-24 mt-5 rounded-full mx-auto ring ring-primary ring-offset-base-100 ring-offset-2"> */}
+          <div className="">
+            {/* <div className="w-24 mt-5 rounded-full mx-auto ring ring-primary ring-offset-base-100 ring-offset-2"> */}
             {/* <img src={user?.photoURL} alt="Nothing" /> */}
             {/* </div> */}
           </div>
         </figure>
-        <div class="card-body">
+        <div className="card-body">
           <div>
             <img
               className="w-24 mt-5 rounded-full mx-auto ring ring-primary ring-offset-base-100 ring-offset-2"

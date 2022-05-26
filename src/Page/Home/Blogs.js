@@ -4,7 +4,9 @@ const Blogs = () => {
   return (
     <div>
       <div>
-        <h1>1. How will you improve the performance of a React Application?</h1>
+        <h1 className="text-2xl font-bold">
+          1. How will you improve the performance of a React Application?
+        </h1>
         <p>1. Using Immutable Data Structures</p>
         <p>2. Function Components and React.PureComponent</p>
         <p>3. Using Production Mode Flag in Webpack</p>
@@ -12,7 +14,7 @@ const Blogs = () => {
         <p>5. Throttling and Debouncing Event Action in JavaScript</p>
       </div>
       <div>
-        <h1>
+        <h1 className="text-2xl font-bold">
           2. What are the different ways to manage a state in a React
           application?
         </h1>
@@ -23,7 +25,9 @@ const Blogs = () => {
         <p>5. Location State</p>
       </div>
       <div>
-        <h3>3. How does prototypical inheritance work?</h3>
+        <h3 className="text-2xl font-bold">
+          3. How does prototypical inheritance work?
+        </h3>
         <p>
           The Prototypal Inheritance is a feature in javascript used to add
           methods and properties in objects. It is a method by which an object
@@ -33,7 +37,7 @@ const Blogs = () => {
         </p>
       </div>
       <div>
-        <h3>
+        <h3 className="text-2xl font-bold">
           4. Why you do not set the state directly in React. For example, if you
           have const [products, setProducts] = useState([]). Why you do not set
           products = [...] instead, you use the setProducts
@@ -45,7 +49,7 @@ const Blogs = () => {
         </p>
       </div>
       <div>
-        <h3>
+        <h3 className="text-2xl font-bold">
           5. You have an array of products. Each product has a name, price,
           description, etc. How will you implement a search to find products by
           name?
@@ -57,7 +61,9 @@ const Blogs = () => {
         </p>
       </div>
       <div>
-        <h3>6. What is a unit test? Why should write unit tests?</h3>
+        <h3 className="text-2xl font-bold">
+          6. What is a unit test? Why should write unit tests?
+        </h3>
         <p>
           Unit tests are typically automated tests written and run by software
           developers to ensure that a section of an application (known as the

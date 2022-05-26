@@ -68,7 +68,7 @@ const SignUp = () => {
           onBlur={handelEmail}
           type="email"
           placeholder="Enter email"
-          class="input input-bordered input-success w-full mb-5"
+          className="input input-bordered input-success w-full mb-5"
         />{" "}
         <br />
         <label htmlFor="">Enter Password</label>
@@ -77,7 +77,7 @@ const SignUp = () => {
           onBlur={handelPassword}
           type="password"
           placeholder="Password"
-          class="input input-bordered input-success w-full mb-5"
+          className="input input-bordered input-success w-full mb-5"
         />
         <br />
         <label htmlFor="">Confirm Password</label>
@@ -86,7 +86,7 @@ const SignUp = () => {
           onBlur={handelConfirmPAss}
           type="password"
           placeholder="confirm Password"
-          class="input input-bordered input-success w-full mb-5"
+          className="input input-bordered input-success w-full mb-5"
         />
         <p className="text-danger">{error1}</p>
         <button

@@ -9,7 +9,7 @@ const Banner = () => {
         alt=""
         className="w-full h-full banner-imgHeight"
       />
-      <div class="centered text-4xl font-bold wdth">
+      <div className="centered text-4xl font-bold wdth">
         <span className="dash">YOU CAN GET BEST CARS BODY PARTS</span>
       </div>
     </div>
