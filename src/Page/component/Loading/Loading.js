@@ -1,13 +1,10 @@
 import React from "react";
-// import { Spinner } from "react-bootstrap";
+import { Spinner } from "@chakra-ui/react";
 
 const Loading = () => {
   return (
-    <div
-      style={{ height: "400px" }}
-      className="w-100 d-flex justify-content-center align-items-center"
-    >
-      {/* <Spinner animation="border" variant="primary" /> */}
+    <div className="flex justify-center items-center h-screen ">
+      <Spinner style={{ height: "50%" }} />
     </div>
   );
 };

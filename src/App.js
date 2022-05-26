@@ -23,6 +23,7 @@ import RequireAuth from "./Page/Home/RequireAuth";
 import Modal from "../../my-app/src/Page/component/Dashboard/Modal";
 import Blogs from "./Page/Home/Blogs";
 import About from "./Page/Home/About";
+import Loading from "./Page/component/Loading/Loading";
 function App() {
   return (
     <div className="App">
@@ -32,6 +33,7 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signUp" element={<SignUp />}></Route>
         <Route path="/about" element={<About />}></Route>
+        {/* <Route path="/loading" element={<Loading />}></Route> */}
 
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route

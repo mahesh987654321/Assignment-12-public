@@ -31,8 +31,8 @@ const SignUp = () => {
   const from = location.state?.from?.pathname || "/";
   const [token] = Hooks(user || user2);
   if (loading || loading1) {
-    // return <Loading></Loading>;
-    <p>Loading...........</p>;
+    return <Loading></Loading>;
+    // <p>Loading...........</p>;
   }
   const handelPassword = (event) => {
     setPassword(event.target.value);
@@ -59,55 +59,7 @@ const SignUp = () => {
   return (
     <div className="w-3/12 mx-auto">
       <ToastContainer />
-      {/* <Form onSubmit={handelSubmit} className="w-50 mx-auto mt-5">
-        <h3 className="text-center">Regester Form</h3>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            onBlur={handelEmail}
-            type="email"
-            placeholder="Enter email"
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            onBlur={handelPassword}
-            type="password"
-            placeholder="Password"
-          />
-          <Form.Label>Confirm Password</Form.Label>
-          <Form.Control
-            onBlur={handelConfirmPAss}
-            type="password"
-            placeholder="Password"
-          />
-          <p className="text-danger">{error1}</p>
-        </Form.Group>
-        <Link className="text-black" to="/login">Already Have a account</Link>
-        <br />
-        <button
-          onClick={() => signInWithGoogle()}
-          className="btn btn-primary text-white"
-        >
-          Sign in with Google
-        </button>
-        <div className="d-flex justify-content-around">
 
-          <button
-          className="bg-primary p-1 mt-2 mb-2"
-            onClick={async () => {
-              await sendPasswordResetEmail(email);
-              toast("Sent email");
-            }}
-          >
-            Reset password
-          </button>
-        </div>
-        <Button className="w-100" variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form> */}
       <form onSubmit={handelSubmit} className="w-50 mx-auto mt-5">
         <h3 className="text-center my-5">Regester Form</h3>
         <label htmlFor="">Email Address</label>

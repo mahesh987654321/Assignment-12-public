@@ -34,8 +34,8 @@ const Login = () => {
     setPassword(event.target.value);
   };
   if (loading || loading1) {
-    // return <Loading></Loading>;
-    return <p>Loading........</p>;
+    return <Loading></Loading>;
+    // return <p>Loading........</p>;
   }
   const handelButton = async (event) => {
     event.preventDefault();
@@ -49,9 +49,7 @@ const Login = () => {
     }
   };
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  
   if (token) {
     navigate(from, { replace: true });
   }
@@ -74,8 +72,8 @@ const Login = () => {
         <br />
         <input
           onBlur={handelPassword}
-          type="email"
-          placeholder="Enter email"
+          type="password"
+          placeholder="Enter Password"
           class="input input-bordered input-success w-full mb-5"
         />{" "}
         {errorElement}

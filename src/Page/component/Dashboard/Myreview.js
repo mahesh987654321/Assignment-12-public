@@ -28,7 +28,7 @@ const Myreview = () => {
     <div className="mt-10">
       <p className="text-3xl text-primary">Write a Review</p>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="text" {...register("name")} />
+        <input type="text" {...register("name")} value={user?.displayName} />
         <textarea
           type="text"
           className="textarea textarea-secondary"
