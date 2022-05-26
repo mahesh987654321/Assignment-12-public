@@ -25,14 +25,13 @@ const Users = () => {
         <table className="table w-full">
           <thead>
             <tr>
-              <th>
-                <label></label>
-              </th>
+              <th></th>
+              <th></th>
               <th>Picture</th>
               <th>Email</th>
               <th>Make Admin</th>
               <th>Remove User</th>
-              <th></th>
+              {/* <th></th> */}
             </tr>
           </thead>
           <tbody>
