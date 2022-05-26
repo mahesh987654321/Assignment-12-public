@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-
+import { ToastContainer, toast } from "react-toastify";
 const UserRow = ({ user, refetch }) => {
   const { email, role } = user;
   // console.log(role);
@@ -13,7 +13,7 @@ const UserRow = ({ user, refetch }) => {
     })
       .then((res) => {
         if (res.status === 403) {
-          alert("Failed to make admin");
+          toast("Failed to make admin");
           res.json();
           return;
         }
@@ -21,13 +21,14 @@ const UserRow = ({ user, refetch }) => {
       .then((data) => {
         refetch();
 
-        alert("Successfully made a admin");
+        toast("Successfully made a admin");
 
         console.log(data);
       });
   };
   return (
     <tr>
+      <ToastContainer />
       <th></th>
       <td>
         <div class="flex items-center space-x-3">

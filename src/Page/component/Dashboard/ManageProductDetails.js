@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { ToastContainer, toast } from "react-toastify";
 const ManageProductDetails = ({ services }) => {
   const {
     image,
@@ -35,15 +35,16 @@ const ManageProductDetails = ({ services }) => {
         .then((res) => res.json())
         .then((data) => {
           const remaining = orders.filter((service) => service._id !== id);
-          
+
           if (remaining) {
-            alert("User deleted");
+            toast("User deleted");
           }
         });
     }
   };
   return (
     <div>
+      <ToastContainer />
       <div class="card h-100 card-compact w-96 bg-base-100 shadow-xl">
         <figure>
           <img src={image} alt="Shoes" />

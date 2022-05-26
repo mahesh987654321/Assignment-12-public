@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { isError } from "react-query";
 import { useParams } from "react-router-dom";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../../firebaseinit";
 
 const Purchase = () => {
@@ -30,12 +30,12 @@ const Purchase = () => {
         const { data } = res;
         console.log(data);
         if (data.insertedId) {
-          alert("Inserted Id");
+          toast("Ordered Successful");
         }
         event.target.reset();
       });
     if (event.target.availablQuantity.value < 100) {
-      alert("Not allowed");
+      toast("Not allowed");
     }
     console.log(event.target.availablQuantity.value);
   };
@@ -54,6 +54,7 @@ const Purchase = () => {
 
   return (
     <>
+      <ToastContainer />
       <p className="flex justify-center text-3xl text-primary font-bold">
         Purchase Page
       </p>
@@ -62,12 +63,6 @@ const Purchase = () => {
           className="flex-col  justify-center items-center mx-auto"
           onSubmit={handleSubmit(onSubmit)}
         >
-          {/* <p>Name: {purchase?.name}</p>
-        <p>Email: {user?.email}</p>
-        <p>pricePerUnit: {purchase?.pricePerUnit}</p>
-        <p>availablQuantity: {purchase?.availablQuantity}</p>
-        <p>minimumQuantity:{purchase?.minimumQuantity}</p>
-        <p>Total Order is: {}</p> */}
           <div>
             <span>Name</span>
             <input

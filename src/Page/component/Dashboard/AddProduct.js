@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from "react-toastify";
 import "./Products.css";
 const AddProduct = () => {
   const { register, handleSubmit } = useForm();
@@ -19,13 +20,14 @@ const AddProduct = () => {
       .then((res) => {
         const { data } = res;
         if (data.insertedId) {
-          alert("Inserted Id");
+          toast("Inserted Id");
         }
         event.target.reset();
       });
   };
   return (
     <div>
+      <ToastContainer />
       <form className="mt-7" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input input-bordered input-warning  wdt  my-2"

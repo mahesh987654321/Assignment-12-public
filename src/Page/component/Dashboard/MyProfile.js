@@ -7,6 +7,7 @@ import auth from "../../../firebaseinit";
 import { updatePhoneNumber } from "firebase/auth";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 import ServiceDetails from "./ServiceDetails";
 const MyProfile = () => {
   const [orders, setOrders] = useState([]);
@@ -28,13 +29,7 @@ const MyProfile = () => {
       Location: event.target.Location.value,
       Profession: event.target.Profession.value,
     };
-    // axios.post("http://localhost:5000/profile", order).then((res) => {
-    //   const { data } = res;
-    //   if (data.insertedId) {
-    //     alert("Inserted Id");
-    //   }
-    //   event.target.reset();
-    // });
+
     fetch(`https://secure-beach-51021.herokuapp.com/profile`, {
       method: "PUT",
       headers: {
@@ -45,6 +40,7 @@ const MyProfile = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log("Data inside use token", data);
+        toast("Profile Updated");
         event.target.reset();
       });
   };
@@ -52,28 +48,38 @@ const MyProfile = () => {
 
   return (
     <div>
+      <ToastContainer />
       <div class="card lg:card-side bg-base-100 shadow-xl">
         <figure>
-          <div class="avatar">
-            <div class="w-24 mt-5 rounded-full mx-auto ring ring-primary ring-offset-base-100 ring-offset-2">
-              <img src={user?.photoURL} alt="Nothing" />
-            </div>
+          <div class="">
+            {/* <div class="w-24 mt-5 rounded-full mx-auto ring ring-primary ring-offset-base-100 ring-offset-2"> */}
+            {/* <img src={user?.photoURL} alt="Nothing" /> */}
+            {/* </div> */}
           </div>
         </figure>
         <div class="card-body">
-          <p>UserId: {user?.metadata?.createdAt}</p>
-          <p>Name: {user?.displayName}</p>
-          <p>Email: {user?.email}</p>
+          <div>
+            <img
+              className="w-24 mt-5 rounded-full mx-auto ring ring-primary ring-offset-base-100 ring-offset-2"
+              src={user?.photoURL}
+              alt="Nothing"
+            />
+          </div>
+          <div>
+            <p>UserId: {user?.metadata?.createdAt}</p>
+            <p>Name: {user?.displayName}</p>
+            <p>Email: {user?.email}</p>
 
-          <p>
-            Phone:{" "}
-            {user?.phoneNumber ? (
-              user.phoneNumber
-            ) : (
-              <span className="text-red-800">No Number</span>
-            )}
-          </p>
-          <p>Creation Time: {user?.metadata?.creationTime}</p>
+            <p>
+              Phone:{" "}
+              {user?.phoneNumber ? (
+                user.phoneNumber
+              ) : (
+                <span className="text-red-800">No Number</span>
+              )}
+            </p>
+            <p>Creation Time: {user?.metadata?.creationTime}</p>
+          </div>
           <p>
             {orders.map((service) => (
               <ServiceDetails service={service}></ServiceDetails>

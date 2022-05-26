@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import React from "react";
 import { useForm } from "react-hook-form";
 import auth from "../../../firebaseinit";
+import { ToastContainer, toast } from "react-toastify";
 import "./Myreview.css";
 const Myreview = () => {
   const [user] = useAuthState(auth);
@@ -19,13 +20,14 @@ const Myreview = () => {
         const { data } = res;
         console.log(data);
         if (data.insertedId) {
-          alert("Inserted Id");
+          toast("Inserted Id");
         }
         event.target.reset();
       });
   };
   return (
     <div className="mt-10">
+      <ToastContainer />
       <p className="text-3xl text-primary">Write a Review</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input type="text" {...register("name")} value={user?.displayName} />

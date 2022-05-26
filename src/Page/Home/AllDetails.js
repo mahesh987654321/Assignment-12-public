@@ -17,7 +17,7 @@ const AllDetails = ({ service }) => {
   };
   return (
     <div>
-      <div class="card h-100 card-compact w-full bg-base-100 shadow-xl">
+      <div class="card h-full card-compact w-full bg-base-100 shadow-xl">
         <figure>
           <img src={image} alt="Shoes" />
         </figure>

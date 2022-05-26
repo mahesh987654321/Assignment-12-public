@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import OrderDetails from "./OrderDetails";
+ import { ToastContainer, toast } from "react-toastify";
 const CheckoutForm = ({ order }) => {
   console.log(order);
   const [cardError, setCardError] = useState("");
@@ -63,7 +64,7 @@ const CheckoutForm = ({ order }) => {
       setCardError("");
       setTransationId(paymentIntent.id);
       setSuccess("Your payment is completed");
-      alert("success");
+      toast("success");
       //
       const payment = {
         order: _id,
@@ -87,6 +88,7 @@ const CheckoutForm = ({ order }) => {
   //   confirm card payment
   return (
     <div>
+      <ToastContainer />
       <>
         <form onSubmit={handleSubmit}>
           <CardElement

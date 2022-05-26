@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
-// import { Button, Form } from "react-bootstrap";
+ import { ToastContainer, toast } from "react-toastify";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
@@ -86,7 +86,7 @@ const Login = () => {
             className="bg-primary p-1 mt-2"
             onClick={async () => {
               await sendPasswordResetEmail(email);
-              alert("Sent email");
+              toast("Sent email");
             }}
           >
             Reset password
@@ -103,6 +103,7 @@ const Login = () => {
           Sign in with Google
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 };
